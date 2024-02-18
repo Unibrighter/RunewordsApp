@@ -5,7 +5,7 @@ import DesignSystem
 struct RunesStackView: View {
   let runes: [String]
   
-  @Binding var asImage: Bool
+  var asImage: Bool
   
   var body: some View {
     HStack {
