@@ -1,7 +1,8 @@
 import Foundation
 import SwiftUI
 
-public class RunesData: ObservableObject {
+@Observable
+public class RunesData {
   public private(set) var runes: [Rune] = []
   public private(set) var runewords: [Runeword] = []
   public private(set) var itemBase: [ItemBase] = []

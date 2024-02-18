@@ -4,7 +4,7 @@ import DesignSystem
 import Stash
 
 struct RunewordRowView: View {
-  @EnvironmentObject private var stash: Stash
+  @Environment(Stash.self) private var stash: Stash
   
   enum DisplayMode {
     case compact, large
@@ -21,7 +21,7 @@ struct RunewordRowView: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 4) {
       runewordName
-      RunesStackView(runes: Array(runeword.runes), asImage: .constant(true))
+      RunesStackView(runes: Array(runeword.runes), asImage: true)
       if displayMode == .large {
         largeModeView
           .font(.AVQestFont(textStyle: .body))

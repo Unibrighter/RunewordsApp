@@ -5,7 +5,7 @@ import Stash
 import ActivityKit
 
 struct RunewordDetailView: View {
-  @EnvironmentObject private var stash: Stash
+  @Environment(Stash.self) private var stash: Stash
   
   @State private var runesAsImage = true
   
@@ -26,7 +26,7 @@ struct RunewordDetailView: View {
       Section {
         LabeledContent("Level", value: String(runeword.level))
         LabeledContent {
-          RunesStackView(runes: Array(runeword.runes), asImage: $runesAsImage)
+          RunesStackView(runes: Array(runeword.runes), asImage: runesAsImage)
             .onTapGesture {
               runesAsImage.toggle()
             }

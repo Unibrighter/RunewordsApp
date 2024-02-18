@@ -4,8 +4,8 @@ import Stash
 import RunesData
 
 struct StashView: View {
-  @EnvironmentObject private var data: RunesData
-  @EnvironmentObject private var stash: Stash
+  @Environment(RunesData.self) private var data: RunesData
+  @Environment(Stash.self) private var stash: Stash
   
   var availableRunewords: [Runeword] {
     data.allAvailableRuneworsFor(runes: stash.runes.map{ $0.id })
@@ -72,6 +72,9 @@ struct StashView: View {
 
 struct StashView_Previews: PreviewProvider {
   static var previews: some View {
-    StashView()
+      StashView()
+          .environment(RunesData())
+          .environment(Stash())
+      
   }
 }

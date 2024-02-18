@@ -4,8 +4,8 @@ import DesignSystem
 import Stash
 
 struct RunesView: View {
-  @EnvironmentObject private var data: RunesData
-  @EnvironmentObject private var stash: Stash
+  @Environment(RunesData.self) private var data: RunesData
+  @Environment(Stash.self) private var stash: Stash
   
   @State private var isInCraftMode = false
   @State private var selectedRune: [Rune] = []
@@ -77,7 +77,6 @@ struct RunesView: View {
     .contextMenu {
       Button {
         withAnimation(.easeIn) {
-          isInCraftMode = true
           selectedRune.append(rune)
         }
       } label: {
@@ -112,11 +111,5 @@ struct RunesView: View {
         RunewordRowView(runeword: runeword, displayMode: .large)
       }
     }.presentationDetents([.medium])
-  }
-}
-
-struct RunesView_Previews: PreviewProvider {
-  static var previews: some View {
-    RunesView()
   }
 }

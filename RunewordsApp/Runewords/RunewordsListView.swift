@@ -3,7 +3,7 @@ import RunesData
 import Stash
 
 struct RunewordsListView: View {
-  @EnvironmentObject private var data: RunesData
+  @Environment(RunesData.self) private var data: RunesData
   
   @State private var itemBaseFilter: [ItemBase] = []
   @State private var searchText: String = ""
@@ -67,5 +67,6 @@ struct RunewordsListView: View {
 struct RunewordsListView_Previews: PreviewProvider {
   static var previews: some View {
     RunewordsListView()
+      .environment(RunesData())
   }
 }

@@ -1,19 +1,20 @@
 import SwiftUI
 import RunesData
 
-public class Stash: ObservableObject {
+@Observable
+public class Stash {
   struct StashData: Codable {
     let runewords: [Runeword]
     let runes: [Rune]
   }
   
-  @Published public var favoriteRunewords: [Runeword] = [] {
+  public var favoriteRunewords: [Runeword] = [] {
     didSet {
       saveData()
     }
   }
   
-  @Published public var runes: [Rune] = [] {
+  public var runes: [Rune] = [] {
     didSet {
       saveData()
     }

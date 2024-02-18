@@ -4,8 +4,8 @@ import DesignSystem
 import Stash
 
 struct RuneDetailView: View {
-  @EnvironmentObject private var data: RunesData
-  @EnvironmentObject private var stash: Stash
+  @Environment(RunesData.self) private var data: RunesData
+  @Environment(Stash.self) private var stash: Stash
   
   public let rune: Rune
 
