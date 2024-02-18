@@ -20,7 +20,6 @@
 		9F968F5C28C8794A0019D9F4 /* RuneRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F968F5B28C8794A0019D9F4 /* RuneRowView.swift */; };
 		9FA71A2C28C71801003DF7E4 /* RunewordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA71A2B28C71801003DF7E4 /* RunewordsApp.swift */; };
 		9FA71A3028C71803003DF7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA71A2F28C71803003DF7E4 /* Assets.xcassets */; };
-		9FA71A3328C71803003DF7E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA71A3228C71803003DF7E4 /* Preview Assets.xcassets */; };
 		9FA71A3C28C72546003DF7E4 /* RunesData in Frameworks */ = {isa = PBXBuildFile; productRef = 9FA71A3B28C72546003DF7E4 /* RunesData */; };
 		9FA71A3F28C73217003DF7E4 /* Stash in Frameworks */ = {isa = PBXBuildFile; productRef = 9FA71A3E28C73217003DF7E4 /* Stash */; };
 		9FA71A4128C732B8003DF7E4 /* RunewordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA71A4028C732B8003DF7E4 /* RunewordsListView.swift */; };
@@ -72,7 +71,6 @@
 		9FA71A2828C71801003DF7E4 /* RunewordsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunewordsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA71A2B28C71801003DF7E4 /* RunewordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunewordsApp.swift; sourceTree = "<group>"; };
 		9FA71A2F28C71803003DF7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9FA71A3228C71803003DF7E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FA71A3928C71E6E003DF7E4 /* RunesData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RunesData; path = Packages/RunesData; sourceTree = "<group>"; };
 		9FA71A3D28C7319A003DF7E4 /* Stash */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Stash; path = Packages/Stash; sourceTree = "<group>"; };
 		9FA71A4028C732B8003DF7E4 /* RunewordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunewordsListView.swift; sourceTree = "<group>"; };
@@ -162,20 +160,11 @@
 				9FA71A2F28C71803003DF7E4 /* Assets.xcassets */,
 				9FA71A5328C73D96003DF7E4 /* Info.plist */,
 				9F2EB1E128C9E2F300335548 /* More */,
-				9FA71A3128C71803003DF7E4 /* Preview Content */,
 				9FA71A4C28C73549003DF7E4 /* Runes */,
 				9FA71A4B28C73545003DF7E4 /* Runewords */,
 				9FA71A4928C7353C003DF7E4 /* Stash */,
 			);
 			path = RunewordsApp;
-			sourceTree = "<group>";
-		};
-		9FA71A3128C71803003DF7E4 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				9FA71A3228C71803003DF7E4 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		9FA71A3A28C72546003DF7E4 /* Frameworks */ = {
@@ -325,7 +314,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA71A3328C71803003DF7E4 /* Preview Assets.xcassets in Resources */,
 				9FA71A3028C71803003DF7E4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +372,7 @@
 				INFOPLIST_FILE = RunewordsWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RunewordsWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,7 +400,7 @@
 				INFOPLIST_FILE = RunewordsWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = RunewordsWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RunewordsApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RunewordsApp\"";
 				DEVELOPMENT_TEAM = Z6P74P6T99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -561,6 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RunewordsApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RunewordsApp\"";
 				DEVELOPMENT_TEAM = Z6P74P6T99;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -593,6 +582,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -3,7 +3,7 @@ import RunesData
 import DesignSystem
 
 struct CubeRecipesListView: View {
-  @EnvironmentObject private var data: RunesData
+  @Environment(RunesData.self) private var data: RunesData
   
   @State private var search: String = ""
   
@@ -26,11 +26,5 @@ struct CubeRecipesListView: View {
     .searchable(text: $search,
                 placement: .navigationBarDrawer(displayMode: .automatic))
     .navigationTitle("Cube Recipes")
-  }
-}
-
-struct CubeRecipesListView_Previews: PreviewProvider {
-  static var previews: some View {
-    CubeRecipesListView()
   }
 }
