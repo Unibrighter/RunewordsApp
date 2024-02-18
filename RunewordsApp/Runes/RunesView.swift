@@ -45,26 +45,17 @@ struct RunesView: View {
   
   @ViewBuilder
   private func makeCrafingModeRow(rune: Rune) -> some View {
-    let isSelectedBinding = Binding<Bool>(
-        get: { self.selectedRune.contains(where: { $0 == rune }) },
-        set: { isSelected in
-            withAnimation(.easeOut) {
-                if isSelected {
-                  self.selectedRune.append(rune)
-                } else {
-                  self.selectedRune.removeAll(where: { $0 == rune })
-                }
-            }
-        }
-    )
+    var isSelected = self.selectedRune.isSelected(rune)
     RuneRowView(
       rune: rune,
-      displayMode: .crafting, 
-      isSelected: isSelectedBinding
+      displayMode: .crafting,
+      isSelected: .constant(isSelected)
     )
-      .onTapGesture {
-        isSelectedBinding.wrappedValue.toggle()
+    .onTapGesture {
+      withAnimation(.easeOut) {
+        self.selectedRune.toggleSelection(of: rune)
       }
+    }
   }
   
   private func makeStandardModeRow(rune: Rune) -> some View {
@@ -108,5 +99,19 @@ struct RunesView: View {
         RunewordRowView(runeword: runeword, displayMode: .large)
       }
     }.presentationDetents([.medium])
+  }
+}
+
+private extension Array where Element == Rune {
+  func isSelected(_ rune: Rune) -> Bool {
+    contains { $0.id == rune.id }
+  }
+  
+  mutating func toggleSelection(of rune: Rune) {
+    if let index = firstIndex(where: { $0.id == rune.id }) {
+      self.remove(at: index)
+    } else {
+      self.append(rune)
+    }
   }
 }
