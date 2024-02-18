@@ -45,34 +45,31 @@ struct RunesView: View {
   
   @ViewBuilder
   private func makeCrafingModeRow(rune: Rune) -> some View {
-    let isSelected = selectedRune.contains(where: { $0 == rune })
-    ZStack(alignment: .topLeading) {
-      if isSelected {
-        Image(systemName: "checkmark.circle.fill")
-          .foregroundColor(Color.itemsColor(color: .set))
-          .offset(x: -16)
-      }
-      RuneRowView(rune: rune)
-        .overlay(
-          RoundedRectangle(cornerRadius: 16)
-            .stroke(Color.itemsColor(color: isSelected ? .set : .runic), lineWidth: 2)
-            .frame(width: 70, height: 70)
-        )
-        .onTapGesture {
-          withAnimation(.easeOut) {
-            if isSelected {
-              selectedRune.removeAll(where: { $0 == rune })
-            } else {
-              selectedRune.append(rune)
+    let isSelectedBinding = Binding<Bool>(
+        get: { self.selectedRune.contains(where: { $0 == rune }) },
+        set: { isSelected in
+            withAnimation(.easeOut) {
+                if isSelected {
+                  self.selectedRune.append(rune)
+                } else {
+                  self.selectedRune.removeAll(where: { $0 == rune })
+                }
             }
-          }
         }
-    }
+    )
+    RuneRowView(
+      rune: rune,
+      displayMode: .crafting, 
+      isSelected: isSelectedBinding
+    )
+      .onTapGesture {
+        isSelectedBinding.wrappedValue.toggle()
+      }
   }
   
   private func makeStandardModeRow(rune: Rune) -> some View {
     NavigationLink(value: rune) {
-      RuneRowView(rune: rune)
+      RuneRowView(rune: rune, displayMode: .normal, isSelected: .constant(false))
     }
     .contextMenu {
       Button {

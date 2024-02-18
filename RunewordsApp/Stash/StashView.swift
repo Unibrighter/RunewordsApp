@@ -29,7 +29,7 @@ struct StashView: View {
       } else {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))], spacing: 20) {
           ForEach(stash.runes) { rune in
-            RuneRowView(rune: rune)
+            RuneRowView(rune: rune, isSelected: .constant(false))
           }
         }
       }
