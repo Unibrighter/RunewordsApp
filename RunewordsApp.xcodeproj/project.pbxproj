@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CDFBCC92B836691008AF591 /* ExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFBCC82B836691008AF591 /* ExpView.swift */; };
 		9F2EB1E328C9E30000335548 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EB1E228C9E30000335548 /* MoreView.swift */; };
 		9F2EB1E528C9E4C200335548 /* CubeRecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2EB1E428C9E4C200335548 /* CubeRecipesListView.swift */; };
 		9F7B8CC128DC48E90004A2BF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F7B8CC028DC48E90004A2BF /* WidgetKit.framework */; };
@@ -59,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4CDFBCC82B836691008AF591 /* ExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpView.swift; sourceTree = "<group>"; };
 		9F2EB1E228C9E30000335548 /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		9F2EB1E428C9E4C200335548 /* CubeRecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRecipesListView.swift; sourceTree = "<group>"; };
 		9F7B8CBF28DC48E90004A2BF /* RunewordsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RunewordsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CDFBCC72B83667C008AF591 /* Exp */ = {
+			isa = PBXGroup;
+			children = (
+				4CDFBCC82B836691008AF591 /* ExpView.swift */,
+			);
+			path = Exp;
+			sourceTree = "<group>";
+		};
 		9F2EB1E128C9E2F300335548 /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 		9FA71A2A28C71801003DF7E4 /* RunewordsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CDFBCC72B83667C008AF591 /* Exp */,
 				9FA71A4A28C73540003DF7E4 /* App */,
 				9FA71A2F28C71803003DF7E4 /* Assets.xcassets */,
 				9FA71A5328C73D96003DF7E4 /* Info.plist */,
@@ -333,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CDFBCC92B836691008AF591 /* ExpView.swift in Sources */,
 				9F968F5C28C8794A0019D9F4 /* RuneRowView.swift in Sources */,
 				9FA71A5028C73C13003DF7E4 /* Routeur.swift in Sources */,
 				9FA71A4628C73480003DF7E4 /* StashView.swift in Sources */,
